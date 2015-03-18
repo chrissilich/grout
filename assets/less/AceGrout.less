@@ -1,0 +1,49 @@
+.grout {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+
+	.row {
+		position: relative;
+		// box-sizing: border-box;
+		height: 25vh;
+		min-height: 240px;
+	
+		.brick {
+			position: absolute;
+			box-sizing: border-box;
+			padding: 20px;	
+
+			&[brick-width="1"] {
+				width: 25vw;
+				max-width:25%;
+			}
+			&[brick-width="2"] {
+				width: 50vw;
+				max-width:50%;
+			}
+			&[brick-width="3"] {
+				width: 75vw;
+				max-width:75%;
+			}
+			&[brick-width="4"] {
+				width: 100vw;
+				max-width:100%;
+			}
+
+			&[brick-height="1"] {
+				height: 100%;
+			}
+			&[brick-height="2"] {
+				height: 200%;
+			}
+			&[brick-height="3"] {
+				height: 300%;
+			}
+			&[brick-height="4"] {
+				height: 400%;
+			}
+		}
+	}
+
+}

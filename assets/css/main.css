@@ -1,0 +1,14 @@
+.brick.photo {
+  background-image: url('http://www.creativecircus.edu/wp-content/uploads/2013/09/monitor-2.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.brick.red {
+  background-color: #d81515;
+}
+.brick.white {
+  background-color: white;
+}
+.brick.black {
+  background-color: #1e1e1e;
+}
