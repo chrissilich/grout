@@ -12,32 +12,101 @@
   position: absolute;
   box-sizing: border-box;
   padding: 20px;
+  overflow: none;
 }
-.grout .row .brick[brick-width="1"] {
-  width: 25vw;
-  max-width: 25%;
+.grout.cols-1 .brick[brick-width="1"] {
+  width: 100%;
 }
-.grout .row .brick[brick-width="2"] {
-  width: 50vw;
-  max-width: 50%;
+.grout.cols-1 .brick[brick-width="2"] {
+  width: 100%;
 }
-.grout .row .brick[brick-width="3"] {
-  width: 75vw;
-  max-width: 75%;
+.grout.cols-1 .brick[brick-width="3"] {
+  width: 100%;
 }
-.grout .row .brick[brick-width="4"] {
-  width: 100vw;
-  max-width: 100%;
+.grout.cols-1 .brick[brick-width="4"] {
+  width: 100%;
 }
-.grout .row .brick[brick-height="1"] {
+.grout.cols-1 .brick[brick-height="1"] {
   height: 100%;
 }
-.grout .row .brick[brick-height="2"] {
+.grout.cols-1 .brick[brick-height="2"] {
+  height: 100%;
+}
+.grout.cols-1 .brick[brick-height="3"] {
+  height: 100%;
+}
+.grout.cols-1 .brick[brick-height="4"] {
+  height: 100%;
+}
+.grout.cols-2 .brick[brick-width="1"] {
+  width: 50%;
+}
+.grout.cols-2 .brick[brick-width="2"] {
+  width: 100%;
+}
+.grout.cols-2 .brick[brick-width="3"] {
+  width: 100%;
+}
+.grout.cols-2 .brick[brick-width="4"] {
+  width: 100%;
+}
+.grout.cols-2 .brick[brick-height="1"] {
+  height: 100%;
+}
+.grout.cols-2 .brick[brick-height="2"] {
   height: 200%;
 }
-.grout .row .brick[brick-height="3"] {
+.grout.cols-2 .brick[brick-height="3"] {
+  height: 200%;
+}
+.grout.cols-2 .brick[brick-height="4"] {
+  height: 200%;
+}
+.grout.cols-3 .brick[brick-width="1"] {
+  width: 33.33333333%;
+}
+.grout.cols-3 .brick[brick-width="2"] {
+  width: 66.66666667%;
+}
+.grout.cols-3 .brick[brick-width="3"] {
+  width: 100%;
+}
+.grout.cols-3 .brick[brick-width="4"] {
+  width: 100%;
+}
+.grout.cols-3 .brick[brick-height="1"] {
+  height: 100%;
+}
+.grout.cols-3 .brick[brick-height="2"] {
+  height: 200%;
+}
+.grout.cols-3 .brick[brick-height="3"] {
   height: 300%;
 }
-.grout .row .brick[brick-height="4"] {
+.grout.cols-3 .brick[brick-height="4"] {
+  height: 300%;
+}
+.grout.cols-4 .brick[brick-width="1"] {
+  width: 25%;
+}
+.grout.cols-4 .brick[brick-width="2"] {
+  width: 50%;
+}
+.grout.cols-4 .brick[brick-width="3"] {
+  width: 75%;
+}
+.grout.cols-4 .brick[brick-width="4"] {
+  width: 100%;
+}
+.grout.cols-4 .brick[brick-height="1"] {
+  height: 100%;
+}
+.grout.cols-4 .brick[brick-height="2"] {
+  height: 200%;
+}
+.grout.cols-4 .brick[brick-height="3"] {
+  height: 300%;
+}
+.grout.cols-4 .brick[brick-height="4"] {
   height: 400%;
 }

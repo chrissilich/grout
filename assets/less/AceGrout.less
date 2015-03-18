@@ -12,23 +12,115 @@
 		.brick {
 			position: absolute;
 			box-sizing: border-box;
-			padding: 20px;	
+			padding: 20px;
+			overflow: none;			
+		}
+	}
 
+	&.cols-1 {
+		.brick {
 			&[brick-width="1"] {
-				width: 25vw;
-				max-width:25%;
+				width: percentage(1);
 			}
 			&[brick-width="2"] {
-				width: 50vw;
-				max-width:50%;
+				width: percentage(1);
 			}
 			&[brick-width="3"] {
-				width: 75vw;
-				max-width:75%;
+				width: percentage(1);
 			}
 			&[brick-width="4"] {
-				width: 100vw;
-				max-width:100%;
+				width: percentage(1);
+			}
+
+			&[brick-height="1"] {
+				height: 100%;
+			}
+			&[brick-height="2"] {
+				height: 100%;
+			}
+			&[brick-height="3"] {
+				height: 100%;
+			}
+			&[brick-height="4"] {
+				height: 100%;
+			}
+		}
+	}
+
+
+	&.cols-2 {
+		.brick {
+			&[brick-width="1"] {
+				width: percentage(1/2);
+			}
+			&[brick-width="2"] {
+				width: percentage(2/2);
+			}
+			&[brick-width="3"] {
+				width: percentage(2/2);
+			}
+			&[brick-width="4"] {
+				width: percentage(2/2);
+			}
+
+			&[brick-height="1"] {
+				height: 100%;
+			}
+			&[brick-height="2"] {
+				height: 200%;
+			}
+			&[brick-height="3"] {
+				height: 200%;
+			}
+			&[brick-height="4"] {
+				height: 200%;
+			}
+		}
+	}
+
+	&.cols-3 {
+		.brick {
+			&[brick-width="1"] {
+				width: percentage(1/3);
+			}
+			&[brick-width="2"] {
+				width: percentage(2/3);
+			}
+			&[brick-width="3"] {
+				width: percentage(3/3);
+			}
+			&[brick-width="4"] {
+				width: percentage(3/3);
+			}
+
+			&[brick-height="1"] {
+				height: 100%;
+			}
+			&[brick-height="2"] {
+				height: 200%;
+			}
+			&[brick-height="3"] {
+				height: 300%;
+			}
+			&[brick-height="4"] {
+				height: 300%;
+			}
+		}
+	}
+
+	&.cols-4 {
+		.brick {
+			&[brick-width="1"] {
+				width: percentage(1/4);
+			}
+			&[brick-width="2"] {
+				width: percentage(2/4);
+			}
+			&[brick-width="3"] {
+				width: percentage(3/4);
+			}
+			&[brick-width="4"] {
+				width: percentage(4/4);
 			}
 
 			&[brick-height="1"] {
