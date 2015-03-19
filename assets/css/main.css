@@ -8,16 +8,20 @@
 }
 .tile.white {
   background-color: white;
+  color: black;
 }
 .tile.light-grey {
   background-color: #f0f0f0;
 }
 .tile.med-grey {
   background-color: #b4b4b4;
+  color: white;
 }
 .tile.dark-grey {
   background-color: #5a5a5a;
+  color: white;
 }
 .tile.black {
   background-color: #1e1e1e;
+  color: white;
 }

@@ -6,13 +6,17 @@
 .grout .row {
   position: relative;
   height: 25vh;
-  min-height: 250px;
+  min-height: 300px;
+}
+.grout .row:nth-child(1),
+.grout .row:nth-child(2),
+.grout .row:nth-child(3),
+.grout .row:nth-child(4) {
+  min-height: 0;
 }
 .grout .row .tile {
   position: absolute;
   box-sizing: border-box;
-  padding: 20px;
-  overflow: none;
 }
 .grout.cols-1 .tile[tile-width="1"] {
   width: 100%;
@@ -27,16 +31,16 @@
   width: 100%;
 }
 .grout.cols-1 .tile[tile-height="1"] {
-  height: 100%;
+  min-height: 100%;
 }
 .grout.cols-1 .tile[tile-height="2"] {
-  height: 100%;
+  min-height: 100%;
 }
 .grout.cols-1 .tile[tile-height="3"] {
-  height: 100%;
+  min-height: 100%;
 }
 .grout.cols-1 .tile[tile-height="4"] {
-  height: 100%;
+  min-height: 100%;
 }
 .grout.cols-2 .tile[tile-width="1"] {
   width: 50%;
@@ -57,10 +61,10 @@
   height: 200%;
 }
 .grout.cols-2 .tile[tile-height="3"] {
-  height: 200%;
+  height: 300%;
 }
 .grout.cols-2 .tile[tile-height="4"] {
-  height: 200%;
+  height: 400%;
 }
 .grout.cols-3 .tile[tile-width="1"] {
   width: 33.33333333%;
@@ -84,7 +88,7 @@
   height: 300%;
 }
 .grout.cols-3 .tile[tile-height="4"] {
-  height: 300%;
+  height: 400%;
 }
 .grout.cols-4 .tile[tile-width="1"] {
   width: 25%;

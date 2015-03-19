@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 	var debugColours = false;
 
-	var snapping = true; // uses scrollsnap plugin
+	var snapping = false; // uses scrollsnap plugin
 
 	// Config End - Don't edit beyond here.
 
@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 
 
-	var findSpace = function(colCount, rowCount, tile) {
+	var findSpace = function(width, height, tile) {
 		// looping through possible start locations
 		for (var r = 0; r < grid.length; r++) {
 			for (var c = 0; c < grid[r].length; c++) {
@@ -67,13 +67,13 @@ $(document).ready(function(){
 				var blocked = false;
 
 				// now loop through the adjacent required squares to see if any are blocked.
-				for (var extraRows = 0; extraRows < rowCount; extraRows++) {
-					for (var extraCols = 0; extraCols < colCount; extraCols++) {
-						if (grid[r+extraRows]) {
-							if (grid[r+extraRows][c+extraCols] || typeof grid[r+extraRows][c+extraCols] == "undefined") {
+				for (var col = 0; col < height; col++) {
+					for (var row = 0; row < width; row++) {
+						try {
+							if (grid[r+col][c+row]) {
 								blocked = true;
 							}
-						}
+						} catch(e) {}
 					};
 				};
 				
@@ -81,9 +81,9 @@ $(document).ready(function(){
 				// if none are blocked...
 				if (!blocked) {
 					// loop through them again, marking them blocked
-					for (var extraRows = 0; extraRows < rowCount; extraRows++) {
-						for (var extraCols = 0; extraCols < colCount; extraCols++) {
-							grid[r+extraRows][c+extraCols] = true;
+					for (var col = 0; col < height; col++) {
+						for (var row = 0; row < width; row++) {
+							grid[r+col][c+row] = true;
 						};
 					};
 
@@ -92,6 +92,8 @@ $(document).ready(function(){
 				}
 			};
 		};
+
+		console.warn("No space found for tile", width, height, tile);
 	}
 
 	
@@ -128,6 +130,8 @@ $(document).ready(function(){
 		$(tiles).hide().appendTo(".grout").each(function() {
 			var w = parseInt( $(this).attr("tile-width") );
 			var h = parseInt( $(this).attr("tile-height") );
+			if (w > columnsNeeded) w = columnsNeeded;
+			if (columnsNeeded == 1) h = 1;
 
 			findSpace(w, h, this);
 
@@ -166,6 +170,8 @@ $(document).ready(function(){
 				}
 			}
 		}
+
+		console.log(grid);
 	}
 
 	makeGrid();
@@ -174,7 +180,8 @@ $(document).ready(function(){
 		$(document).scrollsnap({
 			snaps: 		'.row',
 			proximity: 	500,
-			latency: 	100
+			latency: 	300,
+			duration: 	300
 		});
 	}
 
