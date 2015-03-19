@@ -8,105 +8,105 @@
   height: 25vh;
   min-height: 250px;
 }
-.grout .row .brick {
+.grout .row .tile {
   position: absolute;
   box-sizing: border-box;
   padding: 20px;
   overflow: none;
 }
-.grout.cols-1 .brick[brick-width="1"] {
+.grout.cols-1 .tile[tile-width="1"] {
   width: 100%;
 }
-.grout.cols-1 .brick[brick-width="2"] {
+.grout.cols-1 .tile[tile-width="2"] {
   width: 100%;
 }
-.grout.cols-1 .brick[brick-width="3"] {
+.grout.cols-1 .tile[tile-width="3"] {
   width: 100%;
 }
-.grout.cols-1 .brick[brick-width="4"] {
+.grout.cols-1 .tile[tile-width="4"] {
   width: 100%;
 }
-.grout.cols-1 .brick[brick-height="1"] {
+.grout.cols-1 .tile[tile-height="1"] {
   height: 100%;
 }
-.grout.cols-1 .brick[brick-height="2"] {
+.grout.cols-1 .tile[tile-height="2"] {
   height: 100%;
 }
-.grout.cols-1 .brick[brick-height="3"] {
+.grout.cols-1 .tile[tile-height="3"] {
   height: 100%;
 }
-.grout.cols-1 .brick[brick-height="4"] {
+.grout.cols-1 .tile[tile-height="4"] {
   height: 100%;
 }
-.grout.cols-2 .brick[brick-width="1"] {
+.grout.cols-2 .tile[tile-width="1"] {
   width: 50%;
 }
-.grout.cols-2 .brick[brick-width="2"] {
+.grout.cols-2 .tile[tile-width="2"] {
   width: 100%;
 }
-.grout.cols-2 .brick[brick-width="3"] {
+.grout.cols-2 .tile[tile-width="3"] {
   width: 100%;
 }
-.grout.cols-2 .brick[brick-width="4"] {
+.grout.cols-2 .tile[tile-width="4"] {
   width: 100%;
 }
-.grout.cols-2 .brick[brick-height="1"] {
+.grout.cols-2 .tile[tile-height="1"] {
   height: 100%;
 }
-.grout.cols-2 .brick[brick-height="2"] {
+.grout.cols-2 .tile[tile-height="2"] {
   height: 200%;
 }
-.grout.cols-2 .brick[brick-height="3"] {
+.grout.cols-2 .tile[tile-height="3"] {
   height: 200%;
 }
-.grout.cols-2 .brick[brick-height="4"] {
+.grout.cols-2 .tile[tile-height="4"] {
   height: 200%;
 }
-.grout.cols-3 .brick[brick-width="1"] {
+.grout.cols-3 .tile[tile-width="1"] {
   width: 33.33333333%;
 }
-.grout.cols-3 .brick[brick-width="2"] {
+.grout.cols-3 .tile[tile-width="2"] {
   width: 66.66666667%;
 }
-.grout.cols-3 .brick[brick-width="3"] {
+.grout.cols-3 .tile[tile-width="3"] {
   width: 100%;
 }
-.grout.cols-3 .brick[brick-width="4"] {
+.grout.cols-3 .tile[tile-width="4"] {
   width: 100%;
 }
-.grout.cols-3 .brick[brick-height="1"] {
+.grout.cols-3 .tile[tile-height="1"] {
   height: 100%;
 }
-.grout.cols-3 .brick[brick-height="2"] {
+.grout.cols-3 .tile[tile-height="2"] {
   height: 200%;
 }
-.grout.cols-3 .brick[brick-height="3"] {
+.grout.cols-3 .tile[tile-height="3"] {
   height: 300%;
 }
-.grout.cols-3 .brick[brick-height="4"] {
+.grout.cols-3 .tile[tile-height="4"] {
   height: 300%;
 }
-.grout.cols-4 .brick[brick-width="1"] {
+.grout.cols-4 .tile[tile-width="1"] {
   width: 25%;
 }
-.grout.cols-4 .brick[brick-width="2"] {
+.grout.cols-4 .tile[tile-width="2"] {
   width: 50%;
 }
-.grout.cols-4 .brick[brick-width="3"] {
+.grout.cols-4 .tile[tile-width="3"] {
   width: 75%;
 }
-.grout.cols-4 .brick[brick-width="4"] {
+.grout.cols-4 .tile[tile-width="4"] {
   width: 100%;
 }
-.grout.cols-4 .brick[brick-height="1"] {
+.grout.cols-4 .tile[tile-height="1"] {
   height: 100%;
 }
-.grout.cols-4 .brick[brick-height="2"] {
+.grout.cols-4 .tile[tile-height="2"] {
   height: 200%;
 }
-.grout.cols-4 .brick[brick-height="3"] {
+.grout.cols-4 .tile[tile-height="3"] {
   height: 300%;
 }
-.grout.cols-4 .brick[brick-height="4"] {
+.grout.cols-4 .tile[tile-height="4"] {
   height: 400%;
 }

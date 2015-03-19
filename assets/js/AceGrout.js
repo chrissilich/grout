@@ -31,15 +31,15 @@ $(document).ready(function(){
 	var grid;
 	window.grid = grid;
 
-	var bricks = $(".grout .brick");
-	window.bricks = bricks;
+	var tiles = $(".grout .tile");
+	window.tiles = tiles;
 
 
 
 	// colour debugging
 	if (debugColours) {
 		var mr = function() { return Math.floor( Math.random() * 255 ) };
-		$(bricks).each(function() {		
+		$(tiles).each(function() {		
 			$(this).css("background-color", "rgb("+mr()+","+mr()+","+mr()+")");
 		});
 	}
@@ -47,7 +47,7 @@ $(document).ready(function(){
 
 	var generateBlankGrid = function(cols) {
 		grid = [];
-		var rows = bricks.length;
+		var rows = tiles.length;
 		for (var i = 0; i < rows; i++) {
 			var row = [];
 			for (var j = 0; j < cols; j++) {
@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 
 
-	var findSpace = function(colCount, rowCount, brick) {
+	var findSpace = function(colCount, rowCount, tile) {
 		// looping through possible start locations
 		for (var r = 0; r < grid.length; r++) {
 			for (var c = 0; c < grid[r].length; c++) {
@@ -87,7 +87,7 @@ $(document).ready(function(){
 						};
 					};
 
-					grid[r][c] = brick; // and mark the top left corner one as the brick itself
+					grid[r][c] = tile; // and mark the top left corner one as the tile itself
 					return;
 				}
 			};
@@ -125,9 +125,9 @@ $(document).ready(function(){
 
 		generateBlankGrid(columnsNeeded);
 
-		$(bricks).hide().appendTo(".grout").each(function() {
-			var w = parseInt( $(this).attr("brick-width") );
-			var h = parseInt( $(this).attr("brick-height") );
+		$(tiles).hide().appendTo(".grout").each(function() {
+			var w = parseInt( $(this).attr("tile-width") );
+			var h = parseInt( $(this).attr("tile-height") );
 
 			findSpace(w, h, this);
 
