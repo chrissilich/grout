@@ -14,7 +14,7 @@ $(document).ready(function(){
 		1000 	// 4 col
 	]
 
-	var debugColours = true;
+	var debugColours = false;
 
 	var snapping = true; // uses scrollsnap plugin
 
@@ -28,22 +28,26 @@ $(document).ready(function(){
 
 
 
+	var grid;
+	window.grid = grid;
+
+	var bricks = $(".grout .brick");
+	window.bricks = bricks;
+
+
 
 	// colour debugging
 	if (debugColours) {
 		var mr = function() { return Math.floor( Math.random() * 255 ) };
-		$(".grout .brick").each(function() {		
+		$(bricks).each(function() {		
 			$(this).css("background-color", "rgb("+mr()+","+mr()+","+mr()+")");
 		});
 	}
 
 
-	var grid;
-	window.grid = grid;
-
 	var generateBlankGrid = function(cols) {
 		grid = [];
-		var rows = $(".brick").length;
+		var rows = bricks.length;
 		for (var i = 0; i < rows; i++) {
 			var row = [];
 			for (var j = 0; j < cols; j++) {
@@ -121,7 +125,7 @@ $(document).ready(function(){
 
 		generateBlankGrid(columnsNeeded);
 
-		$(".grout .brick").hide().appendTo(".grout").each(function() {
+		$(bricks).hide().appendTo(".grout").each(function() {
 			var w = parseInt( $(this).attr("brick-width") );
 			var h = parseInt( $(this).attr("brick-height") );
 

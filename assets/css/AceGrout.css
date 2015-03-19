@@ -6,7 +6,7 @@
 .grout .row {
   position: relative;
   height: 25vh;
-  min-height: 240px;
+  min-height: 250px;
 }
 .grout .row .brick {
   position: absolute;
