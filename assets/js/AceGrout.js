@@ -25,9 +25,6 @@ $(document).ready(function(){
 
 
 
-
-
-
 	var grid;
 	window.grid = grid;
 
@@ -55,6 +52,7 @@ $(document).ready(function(){
 			};
 			grid.push(row);
 		};
+		console.log("blank grid", grid);
 	}
 
 
@@ -67,13 +65,14 @@ $(document).ready(function(){
 				var blocked = false;
 
 				// now loop through the adjacent required squares to see if any are blocked.
-				for (var col = 0; col < height; col++) {
-					for (var row = 0; row < width; row++) {
-						try {
-							if (grid[r+col][c+row]) {
-								blocked = true;
-							}
-						} catch(e) {}
+				for (var r2 = 0; r2 < height; r2++) {
+					for (var c2 = 0; c2 < width; c2++) {
+						if (grid[r+r2][c+c2] !== null) {
+							//console.log("blocked", r+r2, c+c2);
+							blocked = true;
+						} else {
+							//console.log("unblocked", r+r2, c+c2, grid[r+r2][c+c2]);
+						}
 					};
 				};
 				
@@ -81,9 +80,9 @@ $(document).ready(function(){
 				// if none are blocked...
 				if (!blocked) {
 					// loop through them again, marking them blocked
-					for (var col = 0; col < height; col++) {
-						for (var row = 0; row < width; row++) {
-							grid[r+col][c+row] = true;
+					for (var r2 = 0; r2 < height; r2++) {
+						for (var c2 = 0; c2 < width; c2++) {
+							grid[r+r2][c+c2] = true;
 						};
 					};
 
@@ -133,6 +132,7 @@ $(document).ready(function(){
 			if (w > columnsNeeded) w = columnsNeeded;
 			if (columnsNeeded == 1) h = 1;
 
+			//console.log($(this).text());
 			findSpace(w, h, this);
 
 		});
